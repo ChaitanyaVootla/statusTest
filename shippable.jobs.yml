@@ -1,0 +1,60 @@
+jobs:
+  - name: sv-1
+    type: manifest
+    steps:
+     - TASK: managed
+    labels:
+     - stage: Test
+     - App: App-1
+  - name: sv-2
+    type: manifest
+    steps:
+     - TASK: managed
+    labels:
+     - stage: Deploy
+     - App: App-1
+
+  - name: sv-3
+    type: manifest
+    steps:
+     - TASK: managed
+    labels:
+     - stage: Test
+     - App: App-2
+  - name: sv-4
+    type: manifest
+    steps:
+     - TASK: managed
+    labels:
+     - stage: RC
+     - App: App-2
+
+  - name: sv-5
+    type: manifest
+    steps:
+     - TASK: managed
+    labels:
+     - stage: BBS
+     - App: App-3
+  - name: sv-6
+    type: manifest
+    steps:
+     - TASK: managed
+    labels:
+     - stage: RC
+     - App: App-3
+
+  - name: sv-7
+    type: manifest
+    steps:
+     - TASK: managed
+    labels:
+     - stage: BBS
+     - App: App-4
+  - name: sv-8
+    type: manifest
+    steps:
+     - TASK: managed
+    labels:
+     - stage: Devel
+     - App: App-4
